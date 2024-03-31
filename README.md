@@ -63,9 +63,9 @@ This section has bills of materials (BOM) as well as a list of 3D components tha
 - [About Octavia Carbon's Thursday](https://www.youtube.com/watch?v=E_M0lsxscfE)
 - [Live walkthrough of Thursday](https://www.youtube.com/watch?v=BNXJqeISVzQ)
 - Epiphyte webinars
-    - [Episode 1](https://www.youtube.com/watch?v=B53BWDbAE4Q)
-    - [Episode 2](https://www.youtube.com/watch?v=-oX7TFdO3ws)
-    - [Episode 3](https://www.youtube.com/watch?v=SeYeDm23_dI)
+    - [Episode 1 - Intro and build launch](https://www.youtube.com/watch?v=B53BWDbAE4Q)
+    - [Episode 2 - Assembly report](https://www.youtube.com/watch?v=-oX7TFdO3ws)
+    - [Episode 3 - Sorbent panel progress](https://www.youtube.com/watch?v=SeYeDm23_dI)
     - [Epiphyte @ COP28](https://www.youtube.com/watch?v=A-t8T-azwP8)
 
 #### Other
