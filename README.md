@@ -71,5 +71,5 @@ This section has bills of materials (BOM) as well as a list of 3D components tha
 #### Other
 
 - [Epiphyte on OpenAir forums](https://www.openairforum.org/c/rd/epiphyte/106)
-- [Epiphyte on Hakster.io](https://www.hackster.io/epiphyte/epiphyte-open-direct-air-capture-d55a9e)
+- [Epiphyte on Hackster.io](https://www.hackster.io/epiphyte/epiphyte-open-direct-air-capture-d55a9e)
 - [First build on Carbon Crowd website](https://carboncrowd.cc/builds/vvRHB4d3vJyN1Ihpj5yi) 
