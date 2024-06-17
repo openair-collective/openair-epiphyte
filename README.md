@@ -1,9 +1,11 @@
+![Static Badge](https://img.shields.io/badge/Version-0.1-8001AA?style=flat)
+[![GitHub License](https://img.shields.io/github/license/openair-collective/openair-epiphyte)](LICENSE.txt)
+[![Carbon Crowd](https://img.shields.io/badge/Website-Carbon%20Crowd-FBE80A)](https://carboncrowd.cc/)
+[![Hackster](https://img.shields.io/badge/Website-Hackster-2E9FE6)](https://www.hackster.io/epiphyte/epiphyte-open-direct-air-capture-d55a9e)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/openair-collective/openair-epiphyte)](https://github.com/openair-collective/openair-epiphyte/issues)
 [![GitHub forks](https://img.shields.io/github/forks/openair-collective/openair-epiphyte?style=flat)](https://github.com/openair-collective/openair-epiphyte/forks)
 [![GitHub Repo stars](https://img.shields.io/github/stars/openair-collective/openair-epiphyte?style=flat&color=8001AA)](https://github.com/openair-collective/openair-epiphyte/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/openair-collective/openair-epiphyte?style=flat&color=0CBAEC)](https://github.com/openair-collective/openair-epiphyte/watchers)
-[![Static Badge](https://img.shields.io/badge/Website-Carbon%20Crowd-FBE80A)](https://carboncrowd.cc/)
-[![Static Badge](https://img.shields.io/badge/Website-Hackster-2E9FE6)](https://www.hackster.io/epiphyte/epiphyte-open-direct-air-capture-d55a9e)
 
 
 # Epiphyte
