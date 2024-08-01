@@ -34,4 +34,5 @@ keywords:
 version: 0.1.0
 doi: 10.5281/zenodo.13147932
 date-released: 2024-07-31
+type: generic
 url: "https://github.com/openair-collective/openair-epiphyte"
