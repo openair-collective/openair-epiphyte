@@ -149,4 +149,25 @@ This [damper](https://hvacquick.com/products/residential/Zoning-and-Zone-Dampers
 ### AC Relays
 This [relay](https://www.amazon.com/gp/product/B00WV7GMA2/ref=ppx_yo_dt_b_asin_title_o00_s00) switches an AC line voltage between outlets under DC control. 
 
+## Sensors
+### CO2 Sensors
+The Sensirion SCD30 CO2 sensor is employed in Epiphyte. It is available on a [breakout board from Adafruit](https://www.adafruit.com/product/4867), with STEMMA QT connectors.
+**NOTE:** the sensor may work fine as-is, but the design of this breakout board is deficient: the SCD30 sensor requires a minimum of 3.3V for specified operation, but this board, which nominally has a 3.3V supply input from the STEMMA QT cable, actually supplies a lower voltage due to drops in the LDO and wire resistance. For reliable operation, I found it necessary to bypass the LDO, and connect the input supply and ground directly to the processor with heavier wires (22 AWG was fine).
+
+### Temperature Sensors and Amplifiers
+Two types of thermocouples were used, with no real difference between them except the shape of the sensor element:
+[Thermocouple Type-K Glass Braid Insulated Stainless Steel Tip](https://www.adafruit.com/product/3245) and [Thermocouple Type-K Glass Braid Insulated - 5m](https://www.adafruit.com/product/3895)
+It is important to note that the sensor end of either type of thermocouple is not electrically insulated, so if it is contacting a conductive surface, it must be insulated from it. Kapton tape works well for this.
+These thermocouples respond with a very low voltage, so an amplifier is needed. The MCP9600, available on a [breakout from Adafruit](https://www.adafruit.com/product/4101), amplifies and digitizes the signal so it can be read with I2C.
+
+### Pressure Sensors (not implemented)
+We specified [pressure sensors](https://www.adafruit.com/product/3965), but at the time of writing this device has not been used. 
+
+### Airflow Sensors
+https://www.mouser.com/ProductDetail/972-FS10151005
+Note: this part is shown as “obsolete” so a replacement will need to be found. 
+
+
+
+
 
