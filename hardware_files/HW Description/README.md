@@ -93,3 +93,22 @@ The MUX addresses and port numbers of each sensor used in Epiphyte are shown in 
 ![Schematic of sensor I2C connectivity.](SensorI2C.png)
 Note one simplification made in this diagram: For connecting the Airflow Sensors, which require a 5-V power supply, a Logic Level Shifter is required to shift the 3.3-V I2C levels to the 5-V system.
 
+### Logic Level Shifter
+The [logic level shifter](https://www.adafruit.com/product/757) is pretty flexible in that it can shift logic levels between any two voltages that are supplied to it. In Epiphyte, pin “LV” is connected to 3.3V, and the I2C SDA and SCL lines from the MUX that control the Airflow Sensors are connected to pins A1 through A4; “HV” is powered from 5V (from the Feather USB pin) and pins B1 through B4 go to the I2C pins of the two Airflow Sensors.
+![Photograph of Adafruit level shifter board.](LevelShifter.jpg)
+
+## Control Switches
+A number of toggle switches are provided for manually controlling the state of the executing software and to control the fan and dampers. These switches are all SPDT (single-pole/double throw). They are connected as follows:
+|     Name       |     Common            |     Term   1          |     Term   2          |     Function                                                                           |
+|----------------|-----------------------|-----------------------|-----------------------|----------------------------------------------------------------------------------------|
+|     POWER      |     GND               |     EN                |     N/C               |     Powers up processor                                                                |
+|     RUN/SET    |     GND               |     Pin 12; pullup    |     Pin 13; pullup    |     RUN=normal system   function     SET=configure system   parameters via terminal    |
+|     FAN        |     Fan   relay       |     GND               |     Pullup            |     Activates fan                                                                      |
+|     DAMPER     |     Damper   relay    |     GND               |     Pullup            |     Activates   dampers                                                                |
+
+Note: [pullups](https://en.wikipedia.org/wiki/Pull-up_resistor), where indicated, are 10kohm to 3.3V.
+
+There is also a pushbutton connected to the processor RESET pin. This is redundant with the RESET button on the processor, but provided for ergonomic reasons.
+
+![Photograph of Adafruit level shifter board.](ControlBoardDetail.jpg).
+
