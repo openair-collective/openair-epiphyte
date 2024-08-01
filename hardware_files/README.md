@@ -1,5 +1,8 @@
 # Hardware
 
+## Hardware Description
+The Hardware Description folder includes high-level documentation of how the parts are connected, as well as pinouts and engineering notes for different classes of components. Make sure to read [that documentation](HW%20Description/README.md) to see how the system is assembled. 
+
 ## Bills of Materials (BOMs)
 
 A BOM is a list of materials needed to reproduce the physical device as closely as possible. There are two BOM files:
@@ -26,6 +29,3 @@ Some custom parts are provided with multiple formats of fabrication files, inclu
 CAD files of all custom parts are accessible, at the time of the publication of this repository, in live-maintained [Onshape](https://www.onshape.com/) files. The BOM lists links for finding the Onshape version of each custom file. The assemblies can be found here: [sorbent panel](https://cad.onshape.com/documents/3e513bed349fbe5dac3c2097/w/f4ba0cf31e493613401f5693/e/31d268d611fa49f66a7aafab?renderMode=0&uiState=66065e0af10d7d54a1518440) and [sensor box](https://cad.onshape.com/documents/c282863293f77fd9e75ee4bd/w/2c50dc42efc36e588e65a721/e/b7f233adbe17413331fabfa8?renderMode=0&uiState=66065e2f9a780059827ee09f)
 
 Note: Onshape is free to use for non-commercial/hobby purposes. The files are free to access and download, although they may need an Onshape account to fork (in the same way software repos are forked).
-
-## Hardware Description
-The Hardware Description folder includes high-level documentation of how the parts are connected, as well as pinouts and engineering notes for different classes of components.
