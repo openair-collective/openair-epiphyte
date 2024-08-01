@@ -46,4 +46,50 @@ This table shows the GPIO pins that are used in this design. Functions are detai
 |     32        |     BUTTON_B        |     I         |     To OLED board pushbutton A (not used)                 |
 |     33        |     HEAT_PWM_2      |     O         |     To Heater 2 control gate; PWM   duty-cycle control    |
 
+## I2C Connections
+The sensors in Epiphyte are all connected to the processor with the [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) serial bus.  It is important to note that because the processor supply and interfaces are 3.3V, any slave devices must also operate from this voltage (including pullups) to avoid damaging the processor.
+
+### Stemma QT
+[STEMMA QT](https://learn.adafruit.com/introducing-adafruit-stemma-qt/what-is-stemma-qt) is an Adafruit system for easily making I2C connections between compatible devices. Many boards come with a STEMMA QT connector, and cables of various lengths are available to connect devices simply by plugging in the cables. 
+Each cable has 4 wires: Power, Ground, SDA, and SCK. Cables come in various lengths; an example is depicted below.
+![Photograph of Adafruit Stemma QT cable.](Stemma.jpg)
+
+### I2C Extender
+I2C signals suffer degradation with longer cables (including STEMMA QT cables). The [I2C extender](https://www.adafruit.com/product/4756) allows cascades of STEMMA QT cables or longer runs between the processor and the sensors. The LTC4311 is an IC which boosts and reshapes I2C signals, and is available from Adafruit on a breakout board with convenient STEMMA QT connectors. This device is liberally used in Epiphyte wherever longer signal runs are needed.
+![Adafruit LTC4311 I2C Extender breakout board.](LTC4311.jpg)
+
+### I2C Multiplexing
+Because there are multiple instances of each type of sensor, most with fixed I2C addresses, a multiplexer is necessary to disambiguate these devices for correct addressing. Adafruit makes a [breakout board](https://www.adafruit.com/product/5626) for the PCA9548 I2C multiplexer chip (shown below), which features a common port on the end and eight switched ports around two edges, all with STEMMA QT connectors.
+
+![Photograph of Adafruit 1:8 mux.](AdafruitMUX.jpg)
+
+The MUX acts as a bidirectional 1-to-8 switch, and is itself an I2C device with its own address. The I2C address of the MUX can be selected with solderable jumpers on the PCB (labelled A0, A1, and A2 on the back - see image below). The position of the switch is controlled by the processor sending a formatted command. Then the MUX becomes transparent and the selected slave device can be addressed in the usual way as if it were the only one on the bus with that address. Note that the ports are numbered 0 through 7.
+
+![Photograph of Adafruit 1:8 mux breakout board, back side.](AdafruitMUXback.jpg)
+
+In the current embodiment of Epiphyte, two 1:8 MUXes are used, with labels as used in the software and corresponding addresses as follows:
+|     MUX Label    |     MUX I2C Address    |
+|------------------|------------------------|
+|     MUX1         |     0x71               |
+|     MUX2         |     0x72               |
+
+The MUX addresses and port numbers of each sensor used in Epiphyte are shown in this table and in the schematic below:
+|     Device              |     Part No.       |     Label    |     MUX#    |     MUX Channel    |     Device I2C Address    |     Location                             |
+|-------------------------|--------------------|--------------|-------------|--------------------|---------------------------|------------------------------------------|
+|     Thermocouple Amp    |     MCP9600        |     T0       |     2       |     0              |     0x67                  |     Not used                             |
+|     Thermocouple Amp    |     MCP9600        |     T1       |     2       |     1              |     0x67                  |     Input side heater   wire, corner     |
+|     Thermocouple Amp    |     MCP9600        |     T2       |     2       |     2              |     0x67                  |     Sorbent center, corner               |
+|     Thermocouple Amp    |     MCP9600        |     T3       |     2       |     3              |     0x67                  |     Output side heater   wire, center    |
+|     Thermocouple Amp    |     MCP9600        |     T4       |     2       |     4              |     0x67                  |     Sorbent center,   center             |
+|     Thermocouple Amp    |     MCP9600        |     T5       |     2       |     5              |     0x67                  |     Input side heater   wire, center     |
+|     Thermocouple Amp    |     MCP9600        |     T6       |     2       |     6              |     0x67                  |     Sorbent frame                        |
+|     Thermocouple Amp    |     MCP9600        |     T7       |     2       |     7              |     0x67                  |     Not used                             |
+|     CO2 Sensor          |     SCD30          |     C0       |     1       |     3              |     0x61                  |     Input duct                           |
+|     CO2 Sensor          |     SCD30          |     C1       |     1       |     4              |     0x61                  |     Output duct                          |
+|     Pressure Sensor     |     MPRLS          |     P0       |     1       |     5              |     0x18                  |     Not used (yet)                       |
+|     Flow meter          |     FS1015-1005    |     F0       |     1       |     2              |     0x50                  |     Not used   (yet)                     |
+|     Flow meter          |     FS1015-1005    |     F1       |     1       |     1              |     0x50                  |     Not used   (yet)                     |
+
+![Schematic of sensor I2C connectivity.](SensorI2C.png)
+Note one simplification made in this diagram: For connecting the Airflow Sensors, which require a 5-V power supply, a Logic Level Shifter is required to shift the 3.3-V I2C levels to the 5-V system.
 
