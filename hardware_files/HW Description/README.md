@@ -137,3 +137,16 @@ The circuit diagram for each switching circuit is shown as an LTSpice schematic 
 ![Heater switching circuit](HeaterSwitchingCircuit.png)
 
 V1 represents the 24-VDC power supply; V2 is the 1-kHz PWM switching signal from the processor pin, and R1 represents the 2.4-ohm resistance of the nichrome wire. The simulation accurately predicted the performance of the actual circuit.
+
+## Mechanical Controls
+### Fan
+The [fan](https://hvacquick.com/products/residential/AirFlow-Boosting/Inline-Air-Booster-Fans/AC-Infinity-CLOUDLINE-Inline-Fans-With-Speed-Controller) requires an AC power supply. A digitally controlled AC relay turns the power on or off; currently this relay is controlled by a manual toggle switch but this could also be connected to a processor GPIO pin for progam control.
+The fan also has a control switch with a pushbutton to adjust the fan speed. At the time of writing, this is done manually. More research needs to be done to work out how to control the fan speed under processor control.
+
+### Dampers
+This [damper](https://hvacquick.com/products/residential/Zoning-and-Zone-Dampers/Zone-Dampers/Suncourt-Motorized-Zone-Dampers) is Normally Open. Applying 24VAC closes the flapper. A transformer is supplied to reduce the 110VAC line voltage to the correct operating level. As with the Fan, an AC relay is used to activate the dampers, also controlled by a manual switch for the time being. To save on parts, both dampers are controlled together from one switch.
+
+### AC Relays
+This [relay](https://www.amazon.com/gp/product/B00WV7GMA2/ref=ppx_yo_dt_b_asin_title_o00_s00) switches an AC line voltage between outlets under DC control. 
+
+
