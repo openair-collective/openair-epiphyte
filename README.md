@@ -6,7 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/openair-collective/openair-epiphyte?style=flat)](https://github.com/openair-collective/openair-epiphyte/forks)
 [![GitHub Repo stars](https://img.shields.io/github/stars/openair-collective/openair-epiphyte?style=flat&color=8001AA)](https://github.com/openair-collective/openair-epiphyte/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/openair-collective/openair-epiphyte?style=flat&color=0CBAEC)](https://github.com/openair-collective/openair-epiphyte/watchers)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13147932.svg)](https://doi.org/10.5281/zenodo.13147932)
 
 # Epiphyte
 
