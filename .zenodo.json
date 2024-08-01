@@ -19,7 +19,7 @@
             "orcid": " 0009-0003-2202-5313"
         },
         {
-            "name": "Morreale, Jay P.",
+            "name": "Morreale, Jay P."
         },
         {
             "name": "Collins, Kristina",
@@ -39,6 +39,5 @@
         "Epiphyte",
         "open hardware"
     ],
-    "license": "CERN-OHL-P-2.0",
-    "upload_type": "other"
+    "license": "CERN-OHL-P-2.0"
 }
