@@ -1,0 +1,43 @@
+{
+    "creators": [
+        {
+            "name": "OpenAir Collective"
+        },
+        {
+            "name": "Wilson, David",
+            "orcid": "0009-0009-9461-8488"
+        },
+        {
+            "name": "Kong, Ling",
+            "orcid": "0000-0003-3661-4058"
+        },
+        {
+            "name": "Kong, Janine"
+        },
+        {
+            "name": "Sternberg, Seth",
+            "orcid": " 0009-0003-2202-5313"
+        },
+        {
+            "name": "Hennessey, JP",
+        },
+        {
+            "name": "Collins, Kristina",
+            "affiliation": "Space Science Institute",
+            "orcid": "0000-0002-3816-1948"
+        },
+        {
+            "name": "Neidl, Chris"
+        }
+    ],
+    "keywords": [
+        "carbon dioxide removal",
+        "CDR",
+        "community science",
+        "OpenAir",
+        "Epiphyte",
+        "open hardware"
+    ],
+    "license": "CERN-OHL-P-2.0",
+    "upload_type": "other"
+}
