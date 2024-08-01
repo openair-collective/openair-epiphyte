@@ -112,3 +112,28 @@ There is also a pushbutton connected to the processor RESET pin. This is redunda
 
 ![Photograph of Adafruit level shifter board.](ControlBoardDetail.jpg).
 
+## Heating System
+Two heating systems are supplied, one for each side of the sorbent. The details of this system will vary greatly depending on the amount of heat needed by the sorbent, the location of the wires, the heat loss from parasitic conduction, and the size of the sorbent panel.
+
+Based on estimates from various sources, I concluded that a maximum power capability of 240W for each system would be sufficient:
+
+*P* = *D* \* *V*<sup>2</sup>/*R*
+
+### Nichrome Wires
+The wires used have a resistivity of 0.4 ohm/ft. The total length of each heater element is 6 ft, yielding a resistance of 2.4 ohm.
+https://www.digikey.com/en/products/detail/remington-industries/18N8025/11612571
+
+### Power Supply
+The power supply needs to produce at least 240 W. This unit does nicely:
+https://www.amazon.com/MEAN-WELL-LRS-350-24-350-4W-Switchable/dp/B013ETVO12/ref=sr_1_3
+At an output voltage of 24V, the maximum current drawn by the heating wire would be 10A.
+The two supplies were mounted in a closed chassis for safety:
+
+![Dual heater power supplies.](PowerSupplies.jpg).
+
+### PWM Switching Circuit
+The circuit diagram for each switching circuit is shown as an LTSpice schematic here:
+
+![Heater switching circuit](HeaterSwitchingCircuit.png)
+
+V1 represents the 24-VDC power supply; V2 is the 1-kHz PWM switching signal from the processor pin, and R1 represents the 2.4-ohm resistance of the nichrome wire. The simulation accurately predicted the performance of the actual circuit.
