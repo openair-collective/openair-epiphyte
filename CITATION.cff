@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Please cite Epiphyte as below."
+authors:
+- family-names: OpenAir Collective
+- family-names: Wilson
+  given-names: David
+  orcid: 0009-0009-9461-8488
+- family-names: Kong
+  given-names: Ling
+  orcid: 0000-0003-3661-4058
+- family-names: Kong
+  given-names: Janine
+- family-names: Sternberg
+  given-names: Seth
+  orcid: 0009-0003-2202-5313
+- family-names: Morreale
+  given-names: Jay P.
+- affiliation: Space Science Institute
+  family-names: Collins
+  given-names: Kristina
+  orcid: 0000-0002-3816-1948
+- family-names: Neidl
+  given-names: Chris
+license:
+- cern-ohl-p-2.0
+title: 'Epiphyte: An Open-Source Direct Air Capture Machine'
+keywords:
+- carbon dioxide removal
+- CDR
+- community science
+- OpenAir
+- Epiphyte
+- open hardware
+version: 0.1.0
+doi: 10.5281/zenodo.13147932
+date-released: 2024-07-31
+url: "https://github.com/openair-collective/openair-epiphyte"
