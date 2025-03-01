@@ -8,6 +8,7 @@
 
 #define SENSIRION_NO_ERR 0x0
 
+// STC3X Repository Link: https://github.com/Sensirion/arduino-i2c-stc3x/tree/master
 SensirionI2cStc3x seeO2_1;
 
 // Wrapper for the STC31_C CO2 Sensor temperature and co2 readings
